@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         //allows button to be found and used in the code
         val btnReset = findViewById<Button>(R.id.btnReset)
 
-        //changes the text in the textbox when the app is first run
+        //changes the text in the textbox when the app is first run; This code was adapted from Geeks for Geeks (2025): https://www.geeksforgeeks.org/textview-in-kotlin/
         txtInfo.text = """
             Welcome to the meal generator.
             Insert a time of day from the options 
@@ -44,15 +44,9 @@ class MainActivity : AppCompatActivity() {
         //gives the button a function
         btnGenMeal.setOnClickListener {
             val userInput: String =
-                editTxtTime.text.toString() //Stack Overflow (2017) converts editText to String
+                editTxtTime.text.toString() //converts editText to String; This code was adapted from a Stack Overflow post by "Mehran" (2017): https://stackoverflow.com/questions/44267572/edittext-get-text-kotlin
 
-            // Title: editText get text Kotlin.
-            // Author: Stack Overflow
-            // Date: 3 October 2018
-            // Version: 1.0
-            // Available: https://stackoverflow.com/questions/44267572/edittext-get-text-kotlin
-
-            //W3 Schools (2025) displays the text given if correct inputs are detected
+            //displays the text given if correct inputs are detected; This code was adapted from W3 Schools (2025): https://www.w3schools.com/kotlin/kotlin_conditions.php
             if (userInput == "Morning" || userInput == "morning")  {
                 txtInfo.text = """
                     This meal is breakfast.
@@ -102,13 +96,7 @@ class MainActivity : AppCompatActivity() {
             """.trimIndent()
         }
 
-        //Title: Kotlin If ... Else
-        // Author: W3 Schools
-        // Date: 2025
-        // Version: 1.0
-        // Available: https://www.w3schools.com/kotlin/kotlin_conditions.php
-
-        //
+        // Gives the button a function
         btnReset.setOnClickListener {
             txtInfo.text = """
             Welcome to the meal generator.
@@ -121,20 +109,35 @@ class MainActivity : AppCompatActivity() {
              - Evening
              - Late-night 
         """.trimIndent()
-            editTxtTime.setText(null) //Stack Overflow (2013) clear an editText box
+            editTxtTime.setText(null) //clears an editText box; This code was adapted from a Stack Overflow post by "Adil Soomro" (2013): https://stackoverflow.com/questions/7241808/how-to-reset-edittext-after-an-action-has-been-completed/7241832
         }
 
-        // Title: How to reset EditText after an action has been completed?
-        // Author: Stack Overflow
-        // Date: 12 November 2013
-        // Version: 1.0
-        // Available: https://stackoverflow.com/questions/7241808/how-to-reset-edittext-after-an-action-has-been-completed/7241832
+
 
 
     }
 }
 
-//avapieper (2025) Summer berries wallpaper. available at: https://au.pinterest.com/pin/492649953514168/ (accessed 27 March 2025) [app wallpaper]
-//Stack Overflow (2017) editText get text Kotlin. [online] Stack Overflow. available at: https://stackoverflow.com/questions/44267572/edittext-get-text-kotlin [accessed 26 March 2025]
-//W3 Schools (2025) Kotlin Kotlin If ... Else. {online} W3 Schools. available at: https://www.w3schools.com/kotlin/kotlin_conditions.php
-//Stack Overflow (2013) How to reset EditText after an action has been completed? [online] Stack Overflow. Available at: https://stackoverflow.com/questions/7241808/how-to-reset-edittext-after-an-action-has-been-completed/7241832
+// Title: TextView in Kotlin
+// Author: Geeks for Geeks
+// Date: 24 February 2025
+// Version: 1.0
+// Available: https://www.geeksforgeeks.org/textview-in-kotlin/
+
+// Title: editText get text Kotlin.
+// Author: "Mehran" on Stack Overflow
+// Date: 3 October 2018
+// Version: 1.0
+// Available: https://stackoverflow.com/questions/44267572/edittext-get-text-kotlin
+
+//Title: Kotlin If ... Else
+// Author: W3 Schools
+// Date: 27 March 2025
+// Version: 1.0
+// Available: https://www.w3schools.com/kotlin/kotlin_conditions.php
+
+// Title: How to reset EditText after an action has been completed?
+// Author: "Adil Soomro" on Stack Overflow
+// Date: 12 November 2013
+// Version: 1.0
+// Available: https://stackoverflow.com/questions/7241808/how-to-reset-edittext-after-an-action-has-been-completed/7241832
