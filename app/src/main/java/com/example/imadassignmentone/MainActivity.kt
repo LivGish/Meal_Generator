@@ -43,8 +43,7 @@ class MainActivity : AppCompatActivity() {
 
         //gives the button a function
         btnGenMeal.setOnClickListener {
-            val userInput: String =
-                editTxtTime.text.toString() //converts editText to String; This code was adapted from a Stack Overflow post by "Mehran" (2017): https://stackoverflow.com/questions/44267572/edittext-get-text-kotlin
+            val userInput: String = editTxtTime.text.toString() //converts editText to String; This code was adapted from a Stack Overflow post by "Mehran" (2017): https://stackoverflow.com/questions/44267572/edittext-get-text-kotlin
 
             //displays the text given if correct inputs are detected; This code was adapted from W3 Schools (2025): https://www.w3schools.com/kotlin/kotlin_conditions.php
             if (userInput == "Morning" || userInput == "morning")  {
@@ -92,7 +91,7 @@ class MainActivity : AppCompatActivity() {
             // error handling - outputs the following text if any value other than the ones stated are inputted
             } else txtInfo.text = """
                 That isn't a valid time.
-                Please try again.
+                Please try again using an option from the list.
             """.trimIndent()
         }
 
